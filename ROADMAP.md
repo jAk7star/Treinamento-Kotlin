@@ -5,13 +5,13 @@ Acompanhamento de progresso nos tópicos e projetos da formação. Marque `[x]` 
 ---
 
 ## 📌 Fase 1: Fundamentos & Mentalidade Kotlin
-- [ ] **Variáveis e Tipagem:** Diferenças e boas práticas entre `val` (imutável) e `var` (mutável).
-- [ ] **Null Safety:** Tipos anuláveis (`String?`), safe-call (`?.`), Elvis operator (`?:`), smart cast e por que evitar `!!`.
-- [ ] **Controle de Fluxo Expressivo:**
-  - [ ] `when` utilizado como expressão (retorno de valores).
-  - [ ] `if` / `else` como expressão.
-  - [ ] Ranges e loops (`in`, `step`, `downTo`).
-- [ ] **Funções:** Parâmetros nomeados, valores padrão (default arguments) e single-expression functions.
+- [x] **Variáveis e Tipagem:** Diferenças e boas práticas entre `val` (imutável) e `var` (mutável).
+- [x] **Null Safety:** Tipos anuláveis (`String?`), safe-call (`?.`), Elvis operator (`?:`), smart cast e por que evitar `!!`.
+- [x] **Controle de Fluxo Expressivo:**
+  - [x] `when` utilizado como expressão (retorno de valores).
+  - [x] `if` / `else` como expressão.
+  - [x] Ranges e loops (`in`, `step`, `downTo`).
+- [x] **Funções:** Parâmetros nomeados, valores padrão (default arguments) e single-expression functions.
 
 ---
 
