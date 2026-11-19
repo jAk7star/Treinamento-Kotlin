@@ -1,0 +1,28 @@
+# Byte-compiled / JVM
+*.class
+*.log
+*.ctxt
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.settings/
+
+# VS Code
+.vscode/
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# OS generated
+.DS_Store
+Thumbs.db
