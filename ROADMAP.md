@@ -16,12 +16,12 @@ Acompanhamento de progresso nos tópicos e projetos da formação. Marque `[x]` 
 ---
 
 ## 📌 Fase 2: POO Idiomática & Recursos Avançados
-- [ ] **Classes & Construtores:** Construtores primários e secundários, `init block`.
-- [ ] **Data Classes:** Geração automática de `equals`, `hashCode`, `toString`, `copy` e *destructuring declarations*.
-- [ ] **Polimorfismo Moderno:** Uso de `sealed class` e `sealed interface` para modelagem de estados de domínio.
-- [ ] **Objects & Companions:** `object` (Singleton) e `companion object` (substitutos para membros estáticos).
-- [ ] **Extension Functions & Properties:** Criação de utilitários idiomáticos sem poluir as classes originais.
-- [ ] **Scope Functions:** Domínio prático de `let`, `apply`, `also`, `run` e `with`.
+- [x] **Classes & Construtores:** Construtores primários e secundários, `init block` com `require(...)` para validação de invariantes.
+- [x] **Data Classes:** Geração automática de `equals`, `hashCode`, `toString`, `copy` e *destructuring declarations*.
+- [x] **Polimorfismo Moderno:** Uso de `sealed interface` para modelagem exaustiva de estados de transação (`Aprovado`, `Recusado`, `Pendente`).
+- [x] **Objects & Companions:** `companion object` com constantes (`const val`) e Factory Methods de conveniência.
+- [x] **Extension Functions & Properties:** Enriquecimento idiomático de tipos existentes (`Double.emMoedaBRL`, `String.mascararCartao()`).
+- [x] **Scope Functions:** Domínio prático de `let`, `apply`, `also`, `run` e `with`.
 
 ---
 

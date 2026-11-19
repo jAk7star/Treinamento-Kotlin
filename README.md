@@ -10,13 +10,34 @@ Desenvolver proficiência sólida no ecossistema **Kotlin moderno para Back-end*
 
 ---
 
+## 📸 Demonstração Prática
+
+### 1. Checkout E-commerce (Fase 1: Fundamentos & Null Safety)
+Modelagem de pedidos com Null Safety, Elvis Operator (`?:`) e faixas de frete calculadas com a expressão `when`.
+
+### 2. Gateway de Pagamentos Multimeios (Fase 2: POO Idiomática & Recursos Avançados)
+Motor de pagamentos multimeios (Cartão de Crédito, PIX e Boleto) com:
+- **`init block` com `require`:** Garantia de invariantes e validação de integridade na criação dos objetos.
+- **`sealed interface`:** Modelagem de tipos de dados algébricos (ADT) com pattern matching exaustivo no compilador.
+- **`companion object`:** Constantes e métodos de fábrica sem recorrer ao `static` do Java.
+- **Extension Functions & Properties:** Formatação de moeda BRL (`Double.emMoedaBRL`) e mascaramento seguro de cartão (`String.mascararCartao()`).
+- **Scope Functions:** Aplicação intencional de `also`, `let`, `with`, `apply` e imutabilidade com `.copy()`.
+
+![Execução do Checkout](assets/screenshots/execucao_checkout.png)
+
+### Bateria de Testes Unitários Automatizados (JUnit 5)
+
+![Testes Unitários Automatizados](assets/screenshots/testes_checkout.png)
+
+---
+
 ## 🛠️ Stack Tecnológica
 
-- **Linguagem:** Kotlin
+- **Linguagem:** Kotlin 2.4+
 - **Plataforma:** JVM (Java 25 LTS)
-- **Framework:** Spring Boot
+- **Framework:** Spring Boot 3.4+
 - **Persistência:** Spring Data JPA / Hibernate & Flyway
-- **Testes:** JUnit 5 & MockK
+- **Testes:** JUnit 5, MockK & AssertJ
 - **Build Tool:** Gradle (Kotlin DSL)
 - **Documentação de API:** SpringDoc OpenAPI / Swagger
 
@@ -28,7 +49,8 @@ Desenvolver proficiência sólida no ecossistema **Kotlin moderno para Back-end*
 Treinamento-Kotlin/
 ├── README.md                     # Apresentação do projeto e portfólio
 ├── ROADMAP.md                    # Checklist e controle de progresso das fases de estudo
-├── 01-fundamentos/               # Conceitos essenciais da sintaxe e POO idiomática
+├── assets/screenshots/           # Screenshots e evidências de execução dos exercícios
+├── 01-fundamentos/               # Conceitos essenciais da sintaxe, Null Safety e POO
 │   └── README.md
 ├── 02-desafios-de-codigo/        # Resolução dos desafios práticos de código
 │   └── README.md
@@ -47,3 +69,15 @@ Para detalhes completos de tópicos, tarefas e checklists de estudo, consulte o 
 3. **Fase 3: Paradigma Funcional & Coleções** (Lambdas, HOFs, Streams e Sequences)
 4. **Fase 4: Back-end Moderno com Spring Boot** (Controllers, DTOs, Services, JPA, Exception Handling)
 5. **Fase 5: Testes Unitários & Qualidade de Software** (MockK, JUnit 5, MockMvc)
+
+---
+
+## 💻 Como Executar
+
+```powershell
+# Executar a aplicação de exercícios
+.\gradlew.bat :01-fundamentos:run --quiet
+
+# Rodar a suíte completa de testes unitários
+.\gradlew.bat test
+```
