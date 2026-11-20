@@ -17,10 +17,11 @@ fun main() {
     val checkoutService = CheckoutService()
 
     val pedido = Pedido(
-        id = "PED-2026-001",
+        id = "PED-2026-XBOX",
         itens = listOf(
-            ItemPedido("Monitor Ultrawide 34\"", 2500.0, 1),
-            ItemPedido("Cabo DisplayPort 1.4", 80.0, 2)
+            ItemPedido("Console Xbox Series X 1TB", 4299.00, 1),
+            ItemPedido("Jogo Grand Theft Auto VI (GTA VI)", 499.90, 1),
+            ItemPedido("Jogo Clair Obscur: Expedition 33", 299.90, 1)
         ),
         enderecoEntrega = Endereco(
             logradouro = "Av. Paulista, 1000",
@@ -28,7 +29,7 @@ fun main() {
             uf = "SP",
             cep = "01310-100"
         ),
-        cupom = Cupom("TECH10", 0.10)
+        cupom = Cupom("GAMES10", 0.10)
     )
 
     val resumo = checkoutService.processarCheckout(pedido)
@@ -47,7 +48,7 @@ fun main() {
     println("📌 [FASE 2] Processamento de Pagamento no Gateway...")
     val pagamentoService = PagamentoService()
 
-    // 1. Pagamento via Cartão de Crédito em 6x
+    // 1. Pagamento via Cartão de Crédito em 8x (Xbox Series X + Games)
     val cartao = MetodoPagamento.CartaoCredito.deDados(
         valor = resumo.totalFinal,
         numero = "4111 2222 3333 4567",
@@ -55,10 +56,10 @@ fun main() {
         mesValidade = 12,
         anoValidade = LocalDate.now().year + 3,
         cvv = "789",
-        parcelas = 6
+        parcelas = 8
     )
 
-    println("💳 Pagamento com Cartão:")
+    println("💳 Pagamento com Cartão (Xbox Series X + GTA VI + Expedition 33):")
     println("• Número Mascarado: ${cartao.numeroCartao.mascararCartao()}")
     println("• Titular: ${cartao.titular}")
     println("• Parcelas: ${cartao.parcelas}x de ${cartao.valorParcela.emMoedaBRL}")
